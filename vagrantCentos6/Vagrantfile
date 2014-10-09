@@ -42,7 +42,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 # From http://docs.vagrantup.com/v2/getting-started/provisioning.html
  config.vm.provision :shell, path: "bootstrap.sh"	
-
+ config.vm.network :forwarded_port, host: 4567, guest: 80
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
